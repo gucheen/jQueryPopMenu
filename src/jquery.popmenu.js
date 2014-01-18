@@ -55,7 +55,7 @@ Based on jQuery 2.0.3
                 'text-decoration': 'none',
                 'color': '#fff'
             });
-            tar_ctrl.hover(function(){tar_ctrl.css('cursor','pointer');},function(){tar_ctrl.css('cursor','alias')});
+            tar_ctrl.hover(function(){tar_ctrl.css('cursor','pointer');},function(){tar_ctrl.css('cursor','default')});
             tar_ctrl.click(function(e) {
                 e.preventDefault();
                 tar_body.show('fast');
@@ -64,6 +64,7 @@ Based on jQuery 2.0.3
                     if(!_con.is(e.target) && _con.has(e.target).length === 0){
                         _con.hide();
                     }
+                    _con.hide();
                 });
             });
             tar_list.hover(function() {
@@ -74,7 +75,7 @@ Based on jQuery 2.0.3
             }, function() {
                 $(this).css({
                     'background': settings.background,
-                    'cursor': 'alias'
+                    'cursor': 'default'
                 });
             });
         }
