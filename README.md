@@ -10,7 +10,7 @@ Intro
 
 Info
 ----
-Version 1.0  
+Still developing now.  
 基于jQuery 2.0.3 构建。
 Chrome, Safari, Firefox, Opera 可用。无IE支持。
 
