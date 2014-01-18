@@ -1,7 +1,7 @@
 jQueryPopMenu
 =============
 
-simple responsive pop menu, it's a jQuery plugin.
+simple responsive popup menu, it's a jQuery plugin.
 
 Intro
 -----
@@ -10,7 +10,6 @@ Intro
 
 Info
 ----
-Version 1.0  
 基于jQuery 2.0.3 构建。
 Chrome, Safari, Firefox, Opera 可用。无IE支持。
 
