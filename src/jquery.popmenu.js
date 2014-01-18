@@ -1,9 +1,16 @@
+/*
+jQuery Pop Menu
+Version: beta
+Author: Guc. http://www.gucheen.pro
+Based on jQuery 2.0.3
+*/
+
 (function($) {
 
     $.fn.popmenu = function(options) {
 
         var settings = $.extend({
-            'controller': 'true',
+            'controller': true,
             'width': '300px',
             'background': '#34495e',
             'focusColor': '#1abc9c',
@@ -12,7 +19,7 @@
             'left': '0',
             'iconSize': '100px'
         }, options);
-        if (settings.controller == 'true') {
+        if (settings.controller === true) {
             var temp_display = 'none';
         } else {
             temp_display = 'block';
@@ -33,7 +40,7 @@
                 'width': settings.width,
                 'float': 'left',
                 'padding': '0',
-                'border-radius': settings.borderRadius,
+                'border-radius': settings.borderRadius
             });
             tar_list.css({
                 'display': 'block',
@@ -48,19 +55,14 @@
                 'text-decoration': 'none',
                 'color': '#fff'
             });
+            tar_ctrl.hover(function(){tar_ctrl.css('cursor','pointer');},function(){tar_ctrl.css('cursor','alias')});
             tar_ctrl.click(function(e) {
                 e.preventDefault();
                 tar_body.show('fast');
-                e.stopPropagation();
-                $(document).click(function(e) {
-                    e = window.event || e;
-                    var obj = $(e.srcElement || e.target);
-                    if ($(obj).is(tar)) {
-                        tar_body.hide();
-                        e.stopPropagation();
-                    } else {
-                        tar_body.hide();
-                        e.stopPropagation();
+                $(document).mouseup(function(e){
+                    var _con = tar_body;
+                    if(!_con.is(e.target) && _con.has(e.target).length === 0){
+                        _con.hide();
                     }
                 });
             });
