@@ -28,7 +28,7 @@ Based on jQuery 2.0.3
         var tar_body = tar.children('ul');
         var tar_list = tar_body.children('li');
         var tar_a = tar_list.children('a');
-        var tar_ctrl = $('#pop_ctrl');
+        var tar_ctrl = tar.children('.pop_ctrl');
 
         function setIt() {
             tar_body.css({
