@@ -22,8 +22,7 @@
             color: #3498db;
         }
         footer{
-            position: absolute;
-            bottom: 100px;
+            margin-top: 150px;
         }
     </style>
 </head>
@@ -31,10 +30,10 @@
 <a href="https://github.com/gucheen/jQueryPopMenu"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
     <div id="container">
         <h1>jQuery pop menu</h1>
-        <span>click the button below to have a try.</span>
+        <span>click these buttons below to have a try.</span>
 
         <div id="demo_box">
-            <div id="pop_ctrl"><i class="fa fa-bars"></i></div>
+            <div class="pop_ctrl"><i class="fa fa-bars"></i></div>
             <ul id="demo_ul">
                 <li class="demo_li"><a href="#"><div><i class="fa fa-home"></i></div><div>Home</div></a></li>
                 <li class="demo_li"><div><i class="fa fa-cloud"></i></div><div>Cloud</div></li>
@@ -47,9 +46,25 @@
                 <li class="demo_li"><div><i class="fa fa-power-off"></i></div><div>Exit</div></li>
             </ul>
         </div>
-        <pre style="margin-top: 100px;">
-$('#demo_box').popmenu();
+        <div id="demo_box_2">
+            <div class="pop_ctrl"><i class="fa fa-bars"></i></div>
+            <ul id="demo_ul_2">
+                <li class="demo_li"><a href="#"><div><i class="fa fa-home"></i></div><div>Home</div></a></li>
+                <li class="demo_li"><div><i class="fa fa-cloud"></i></div><div>Cloud</div></li>
+                <li class="demo_li"><div><i class="fa fa-cog"></i></div><div>settings</div></li>
+                <li class="demo_li"><div><i class="fa fa-envelope"></i></div><div>E-mail</div></li>
+                <li class="demo_li"><div><i class="fa fa-clock-o"></i></div><div>Clock</div></li>
+                <li class="demo_li"><div><i class="fa fa-folder"></i></div><div>Files</div></li>
+                <li class="demo_li"><div><i class="fa fa-heart-o"></i></div><div>Favourites</div></li>
+                <li class="demo_li"><div><i class="fa fa-mobile"></i></div><div>Mobile</div></li>
+                <li class="demo_li"><div><i class="fa fa-power-off"></i></div><div>Exit</div></li>
+            </ul>
+        </div>
+        <h2 style="margin-top: 50px;">How to use:</h2>
+        <pre>
+  $('#demo_box').popmenu();
         </pre>
+        <p>Find more information on <a href="https://github.com/gucheen/jQueryPopMenu">github</a>.</p>
         <footer>
             Code By Guc.
         </footer>
@@ -59,6 +74,7 @@ $('#demo_box').popmenu();
     <script>
         $(function(){
             $('#demo_box').popmenu();
+            $('#demo_box_2').popmenu({'background':'#e67e22','focusColor':'#c0392b','borderRadius':'0'});
         })
     </script>
 </body>
