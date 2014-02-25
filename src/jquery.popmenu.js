@@ -64,7 +64,7 @@ Based on jQuery 2.0.3
                     if(!_con.is(e.target) && _con.has(e.target).length === 0){
                         _con.hide();
                     }
-                    _con.hide();
+                    //_con.hide(); some functions you want
                 });
             });
             tar_list.hover(function() {
