@@ -5,9 +5,9 @@ Author: Guc. http://www.gucheen.pro
 Based on jQuery 2.0.3
 */
 
-(function($) {
+(function ($) {
 
-    $.fn.popmenu = function(options) {
+    $.fn.popmenu = function (options) {
 
         var settings = $.extend({
             'controller': true,
@@ -22,7 +22,7 @@ Based on jQuery 2.0.3
         if (settings.controller === true) {
             var temp_display = 'none';
         } else {
-            temp_display = 'block';
+            var temp_display = 'block';
         }
         var tar = $(this);
         var tar_body = tar.children('ul');
@@ -55,24 +55,28 @@ Based on jQuery 2.0.3
                 'text-decoration': 'none',
                 'color': '#fff'
             });
-            tar_ctrl.hover(function(){tar_ctrl.css('cursor','pointer');},function(){tar_ctrl.css('cursor','default')});
-            tar_ctrl.click(function(e) {
+            tar_ctrl.hover(function () {
+                tar_ctrl.css('cursor', 'pointer');
+            }, function () {
+                tar_ctrl.css('cursor', 'default')
+            });
+            tar_ctrl.click(function (e) {
                 e.preventDefault();
                 tar_body.show('fast');
-                $(document).mouseup(function(e){
+                $(document).mouseup(function (e) {
                     var _con = tar_body;
-                    if(!_con.is(e.target) && _con.has(e.target).length === 0){
+                    if (!_con.is(e.target) && _con.has(e.target).length === 0) {
                         _con.hide();
                     }
                     //_con.hide(); some functions you want
                 });
             });
-            tar_list.hover(function() {
+            tar_list.hover(function () {
                 $(this).css({
                     'background': settings.focusColor,
                     'cursor': 'pointer'
                 });
-            }, function() {
+            }, function () {
                 $(this).css({
                     'background': settings.background,
                     'cursor': 'default'

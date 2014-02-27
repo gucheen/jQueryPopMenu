@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css"/>
     <style>
         #container{
-            max-width: 400px;
+            max-width: 480px;
             width: 100%;
             margin: 20px auto;
         }
         #demo_box{
-            width: 300px;
+            width: 480px;
         }
         .fa{
             font-size: 40px;
@@ -21,8 +21,9 @@
         .fa-bars{
             color: #3498db;
         }
-        footer{
-            margin-top: 150px;
+        pre{
+            font-family: Consolas,Liberation Mono,Courier,monospace;
+            font-size: 13px;
         }
     </style>
 </head>
@@ -60,17 +61,26 @@
                 <li class="demo_li"><div><i class="fa fa-power-off"></i></div><div>Exit</div></li>
             </ul>
         </div>
-        <h2 style="margin-top: 50px;">How to use:</h2>
-        <pre>
-  $('#demo_box').popmenu();
-        </pre>
+        <h2>How to use:</h2>
+        <pre>$('#demo_box').popmenu({parameters});</pre>
+        <p>You can use parameters below.</p>
+        <pre>{
+    'controller': true,       // use control button or not
+    'width': '300px',         // width of menu
+    'background': '#34495e',  // background color of menu
+    'focusColor': '#1abc9c',  // hover color of menu's buttons
+    'borderRadius': '10px',   // radian of angles, '0' for right angle
+    'top': '50',              // pixels that move up
+    'left': '0',              // pixels that move left
+    'iconSize': '100px'       // size of menu's buttons
+}</pre>
         <p>Find more information on <a href="https://github.com/gucheen/jQueryPopMenu">github</a>.</p>
         <footer>
             Code By Guc.
         </footer>
     </div>
     <script src="lib/jquery/jquery.min.js"></script>
-    <script src="jquery.popmenu.min.js"></script>
+    <script src="src/jquery.popmenu.js"></script>
     <script>
         $(function(){
             $('#demo_box').popmenu();
