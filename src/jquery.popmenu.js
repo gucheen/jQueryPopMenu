@@ -17,7 +17,9 @@ Based on jQuery 2.0.3
             'borderRadius': '10px',
             'top': '50',
             'left': '0',
-            'iconSize': '100px'
+            'iconSize': '100px',
+            'color': '#fff',
+            'border': '0px'
         }, options);
         if (settings.controller === true) {
             var temp_display = 'none';
@@ -40,11 +42,12 @@ Based on jQuery 2.0.3
                 'width': settings.width,
                 'float': 'left',
                 'padding': '0',
-                'border-radius': settings.borderRadius
+                'border-radius': settings.borderRadius,
+                'border': settings.border
             });
             tar_list.css({
                 'display': 'block',
-                'color': '#fff',
+                'color': settings.color,
                 'float': 'left',
                 'width': settings.iconSize,
                 'height': settings.iconSize,
@@ -53,7 +56,7 @@ Based on jQuery 2.0.3
             });
             tar_a.css({
                 'text-decoration': 'none',
-                'color': '#fff'
+                'color': settings.color
             });
             tar_ctrl.hover(function () {
                 tar_ctrl.css('cursor', 'pointer');
