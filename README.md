@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgucheen%2FjQueryPopMenu.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgucheen%2FjQueryPopMenu?ref=badge_shield)
+
 jQueryPopMenu
 =============
 
@@ -33,3 +35,7 @@ Usage
 //使用时无需受Demo影响，按钮可以是纯文字，内容排版自行安排设计。
 ```
 注：控制按钮对应 `.pop_ctrl` ，即名字为 `pop_ctrl` 的class，使用class是为了方便同时使用多个菜单，各菜单间无影响。
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgucheen%2FjQueryPopMenu.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgucheen%2FjQueryPopMenu?ref=badge_large)
